@@ -1,39 +1,56 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "madar_pes",
+    'name': "Madar PES – Partial & Multi-word Product Search",
 
-    'summary': "Short (1 phrase/line) summary of the module's purpose",
+    'summary': "Unordered multi-word and partial product search in POS, Sales & Stock (supports Arabic & English).",
 
     'description': """
-Long description of module's purpose
+This module improves Odoo product search by adding:
+- Partial search (by any part of the product name).
+- Unordered multi-word search.
+- Works in Point of Sale, Sales, and Stock.
+- Supports both Arabic and English search terms.
     """,
 
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
+    'author': "sarareda-dev",
+    'website': "https://github.com/sarareda-dev/odoo-18",
 
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
+    'category': 'Sales/Point of Sale',
+    'version': '18.0.1.0.0',
 
-    # any module necessary for this one to work correctly
-    'depends': ['base','product','point_of_sale','stock'],
+    'license': 'LGPL-3',
 
-    # always loaded
+    # dependencies
+    'depends': ['base', 'product', 'point_of_sale', 'stock'],
+
+    # data files
     'data': [
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
     ],
+
+    # assets
     'assets': {
-    'point_of_sale._assets_pos': [
-        'madar_pes/static/src/js/search_patch.js',
-    ],
-},
-    # only loaded in demonstration mode
+        'point_of_sale._assets_pos': [
+            'madar_pes/static/src/js/search_patch.js',
+        ],
+    },
+
     'demo': [
         'demo/demo.xml',
     ],
-}
 
+    'images': [
+        'static/description/1.jpeg',
+        'static/description/2.jpeg',
+        'static/description/3.jpeg',
+    ],
+
+    'installable': True,
+    'application': False,
+
+    # 🟢 السعر والعملة (Odoo Apps)
+    'price': 150.0,
+    'currency': 'USD',
+}
