@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Madar PES – Partial & Multi-word Product Search",
+    'name': " Partial & Multi-word Product Search",
 
     'summary': "Unordered multi-word and partial product search in POS, Sales & Stock (supports Arabic & English).",
 
